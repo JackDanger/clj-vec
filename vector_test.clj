@@ -15,6 +15,9 @@
 (expect (vec-dot [1 1 1 1 1] [2 2 2 2 2])
         10
 )
+(expect (vec-cross [1 2 3] [3 4 5])
+        [-2 4 -2]
+)
 (pending "figuring out how to import sqrt"
   (expect (vec-len [2 2 2 2])
           4

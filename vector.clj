@@ -18,6 +18,14 @@
   (reduce + (_vec-op * a b))
 )
 
+(defn vec-cross [a b]
+  [
+    (- (* (nth a 1) (nth b 2)) (* (nth a 2) (nth b 1)))
+    (- (* (nth a 2) (nth b 0)) (* (nth a 0) (nth b 2)))
+    (- (* (nth a 0) (nth b 1)) (* (nth a 1) (nth b 0)))
+  ]
+)
+
 ;(defn vec-len [a]
 ;  (sqrt (map #(* %1 %1) a))
 ;)
